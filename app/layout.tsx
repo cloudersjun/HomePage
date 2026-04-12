@@ -15,6 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "宠店营销Agent - AI驱动的宠物门店营销内容生成平台",
   description: "上传宠物照片，AI一键生成专业营销素材。海报、文案、社交媒体内容，统统搞定。让每一只宠物都成为营销明星！",
+  icons: {
+    icon: "/mineclaw.png",
+    apple: "/mineclaw.png",
+  },
 };
 
 export default function RootLayout({

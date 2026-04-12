@@ -33,12 +33,25 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2 group">
             <motion.div
               whileHover={{ rotate: 15 }}
-              className="w-10 h-10 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full flex items-center justify-center"
+              className="w-10 h-10 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full flex items-center justify-center overflow-hidden shadow-inner"
             >
-              <PawPrint className="w-6 h-6 text-white" />
+              {/* 这里预留头像图片路径，如果没有图片则显示图标 */}
+              <img 
+                src="/mineclaw.png" 
+                alt="Logo" 
+                className="w-full h-full object-cover hidden group-hover:block" 
+                style={{ 
+                  filter: 'sepia(1) hue-rotate(320deg) saturate(2) brightness(1.1)'
+                }}
+                onError={(e) => (e.currentTarget.style.display = 'none')}
+              />
+              <PawPrint className="w-6 h-6 text-white group-hover:hidden" />
+              <div className="w-full h-full flex items-center justify-center group-hover:hidden">
+                <PawPrint className="w-6 h-6 text-white" />
+              </div>
             </motion.div>
             <span className="text-xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
               宠店营销Agent
