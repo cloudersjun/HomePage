@@ -5,14 +5,14 @@ import { Check, Star, Crown, Gem } from 'lucide-react';
 
 const plans = [
   {
-    name: '试用版',
+    name: '体验版',
     icon: Star,
     price: '免费',
     period: '',
-    description: '适合初次体验，感受AI营销的魅力',
+    description: '适合单店体验，感受AI营销的便利',
     features: [
       '每月10次生成额度',
-      '基础模板使用',
+      '基础门店模板使用',
       '标准图片质量',
       '朋友圈文案生成',
       '社区支持',
@@ -22,18 +22,18 @@ const plans = [
     gradient: 'from-gray-400 to-gray-500',
   },
   {
-    name: '基础版',
+    name: '标准版',
     icon: Crown,
     price: '¥99',
     period: '/月',
-    description: '适合小型宠物店，满足日常营销需求',
+    description: '适合单家门店，满足日常营销需求',
     features: [
       '每月50次生成额度',
-      '全部模板解锁',
+      '全部门店模板解锁',
       '高清图片生成',
       '多平台文案适配',
       'AI对话优化',
-      '数据分析报告',
+      '营销数据报告',
       '优先客服支持',
     ],
     cta: '开始订阅',
@@ -41,11 +41,11 @@ const plans = [
     gradient: 'from-orange-400 to-pink-400',
   },
   {
-    name: '专业版',
+    name: '连锁版',
     icon: Gem,
     price: '¥299',
     period: '/月',
-    description: '适合连锁店和品牌店，专业级营销方案',
+    description: '适合连锁门店，多店统一管理',
     features: [
       '每月200次生成额度',
       '自定义品牌模板',
@@ -54,7 +54,7 @@ const plans = [
       '高级AI对话',
       '深度数据分析',
       '专属客户经理',
-      'API接口 access',
+      '多门店管理后台',
     ],
     cta: '开始订阅',
     highlighted: false,
@@ -91,7 +91,7 @@ export default function PricingSection() {
             viewport={{ once: true }}
             className="text-xl text-gray-600 max-w-2xl mx-auto"
           >
-            从免费试用到专业版，满足不同规模宠物店的营销需求
+            从免费体验到连锁门店方案，满足不同规模宠物门店的营销需求
           </motion.p>
         </div>
 

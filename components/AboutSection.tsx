@@ -24,7 +24,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
           >
-            用AI让每只宠物被更多人喜爱
+            专注为宠物门店提供AI营销服务
           </motion.h2>
         </div>
 
@@ -37,16 +37,16 @@ export default function AboutSection() {
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-4">我们的故事</h3>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              我们是一支热爱宠物、深耕AI技术的团队。在走访了数百家宠物店后，我们发现：
-              店主们花了大量时间照顾毛孩子，却很难抽出精力做专业的营销内容。
+              我们是一支热爱宠物、深耕AI技术的团队。在走访了数百家宠物门店后，我们发现：
+              门店员工花了大量时间照顾宠物和接待客户，却很难抽出精力做专业的营销推广。
             </p>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              于是我们创造了「宠店营销Agent」——让AI成为每个宠物店的营销助手。
-              店主只需上传照片，剩下的交给AI。
+              于是我们创造了「宠店营销Agent」——让AI成为每家门店的营销助手。
+              门店只需上传照片，剩下的交给AI。
             </p>
             <p className="text-gray-700 leading-relaxed">
-              现在，已有超过1000+宠物店在使用我们的产品，每月生成超过10000+营销素材。
-              我们希望帮助更多宠物店，让更多可爱的毛孩子被看见、被喜爱。
+              现在，已有超过1000+宠物门店在使用我们的产品，每月生成超过10000+营销素材。
+              我们希望帮助更多宠物门店，让营销不再是门店经营的负担。
             </p>
           </motion.div>
           <motion.div
@@ -57,8 +57,8 @@ export default function AboutSection() {
           >
             <div className="text-center">
               <div className="text-6xl mb-4">🐾</div>
-              <p className="text-2xl font-bold text-gray-800 mb-2">让营销变得如此简单</p>
-              <p className="text-gray-600">店主专注于照顾毛孩子，营销交给我们</p>
+              <p className="text-2xl font-bold text-gray-800 mb-2">让门店营销变得如此简单</p>
+              <p className="text-gray-600">门店员工专注服务客户，营销交给我们</p>
             </div>
           </motion.div>
         </div>
@@ -68,13 +68,13 @@ export default function AboutSection() {
           {[
             {
               icon: Target,
-              title: '专注价值',
-              description: '我们专注于为宠物店创造真实的营销价值，每一分投入都要有回报',
+              title: '专注门店价值',
+              description: '我们专注于为宠物门店创造真实的营销价值，每一分投入都要有回报',
             },
             {
               icon: Users,
-              title: '用户至上',
-              description: '倾听用户声音，持续迭代优化，让产品真正解决痛点',
+              title: '门店用户至上',
+              description: '倾听门店用户声音，持续迭代优化，让产品真正解决门店经营痛点',
             },
             {
               icon: Heart,
@@ -108,7 +108,7 @@ export default function AboutSection() {
         >
           <h3 className="text-3xl font-bold mb-4">准备好开始了吗？</h3>
           <p className="text-lg mb-8 opacity-90">
-            立即使用微信小程序体验AI营销，或联系我们获取专属方案
+            立即为门店体验AI智能营销，或联系我们获取专属方案
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

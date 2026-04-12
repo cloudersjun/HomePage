@@ -17,8 +17,8 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-gray-600 text-sm">
-              AI驱动的宠物门店营销内容生成平台<br />
-              让每一只宠物都成为营销明星
+              AI驱动的宠物门店智能营销平台<br />
+              专注为线下宠物门店提供一站式营销解决方案
             </p>
           </div>
 

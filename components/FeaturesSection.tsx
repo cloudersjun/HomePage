@@ -6,38 +6,38 @@ import { Wand2, Image, FileText, MessageSquare, BarChart3, Clock } from 'lucide-
 const features = [
   {
     icon: Wand2,
-    title: '一键生成营销包',
-    description: '上传宠物照片和促销主题，AI自动生成全套营销素材，包含海报、文案、社交媒体内容',
+    title: '门店营销包一键生成',
+    description: '上传门店宠物照片和促销主题，AI自动生成全套营销素材，海报、文案、社交平台内容一次搞定',
     color: 'from-orange-400 to-pink-400',
   },
   {
     icon: Image,
-    title: '智能图片处理',
-    description: 'AI智能美化宠物照片，生成专业级宠物写真和促销海报，支持多种风格模板',
+    title: '门店专属海报',
+    description: 'AI智能美化门店宠物照片，生成专业级促销海报，多种门店营销模板即选即用',
     color: 'from-pink-400 to-purple-400',
   },
   {
     icon: FileText,
-    title: '多平台文案生成',
-    description: '根据宠物特点和促销信息，自动生成适配朋友圈、抖音、小红书等平台的营销文案',
+    title: '多平台文案自动适配',
+    description: '根据门店活动和宠物特点，自动生成朋友圈、抖音、小红书等平台营销文案',
     color: 'from-purple-400 to-blue-400',
   },
   {
     icon: MessageSquare,
-    title: 'AI对话优化',
-    description: '支持多轮对话交互，根据反馈不断优化营销内容，直到你满意为止',
+    title: 'AI对话式优化',
+    description: '像和助手聊天一样调整营销内容，AI根据门店需求不断优化，直到满意为止',
     color: 'from-blue-400 to-green-400',
   },
   {
     icon: BarChart3,
-    title: '数据分析',
-    description: '追踪营销效果，分析哪些内容更受欢迎，帮助优化后续营销策略',
+    title: '门店营销数据追踪',
+    description: '追踪每篇营销内容的效果，分析哪些宠物和内容更吸引客户，优化门店营销策略',
     color: 'from-green-400 to-orange-400',
   },
   {
     icon: Clock,
-    title: '节省90%时间',
-    description: '原本需要数小时的营销内容制作，现在只需几分钟，让店主专注于核心业务',
+    title: '门店人力节省90%',
+    description: '原本需要专职运营的营销工作，现在几分钟搞定，让门店员工专注于照顾宠物和客户服务',
     color: 'from-orange-400 to-red-400',
   },
 ];
@@ -63,7 +63,7 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
           >
-            AI赋能，让营销如此简单
+            专为宠物门店打造的AI营销能力
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -71,7 +71,7 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
             className="text-xl text-gray-600 max-w-2xl mx-auto"
           >
-            从图片生成到文案创作，从多平台适配到效果追踪，一站式解决宠物门店营销需求
+            从门店海报到社交文案，从多平台适配到效果追踪，一站式解决宠物门店营销难题
           </motion.p>
         </div>
 

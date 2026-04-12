@@ -45,9 +45,9 @@ export default function HeroSection() {
             transition={{ delay: 0.2 }}
             className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
           >
-            上传宠物照片，AI一键生成专业营销素材
+            专为宠物门店打造的AI营销工具
             <br />
-            海报、文案、社交媒体内容，统统搞定
+            上传门店宠物照片，一键生成海报、文案、社交媒体内容
           </motion.p>
 
           {/* CTA Buttons */}
