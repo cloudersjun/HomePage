@@ -56,19 +56,19 @@ npm run build
 
 ```bash
 # 方法1：使用scp上传
-scp -r out/* root@你的服务器IP:/var/www/petmarketing-website/
+scp -r out/* root@你的服务器IP:/opt/apps/HomePage/out/
 
 # 方法2：使用rsync（推荐，支持增量更新）
-rsync -avz out/ root@你的服务器IP:/var/www/petmarketing-website/
+rsync -avz out/ root@你的服务器IP:/opt/apps/HomePage/out/
 ```
 
 或者通过Git部署：
 
 ```bash
 # 在服务器上
-cd /var/www
-git clone <你的仓库地址> petmarketing-website
-cd petmarketing-website
+cd /opt/apps
+git clone <你的仓库地址> HomePage
+cd HomePage
 npm install
 npm run build
 ```
@@ -81,7 +81,7 @@ npm run build
 
 ```bash
 # 在服务器上编辑Nginx配置
-sudo nano /etc/nginx/sites-available/petmarketing
+sudo nano /etc/nginx/sites-available/homepage
 ```
 
 完整配置示例（将 `mineclaw.top` 替换为你的真实域名）：
@@ -110,7 +110,7 @@ server {
 
     # 根路径：官方网页（静态文件）
     location / {
-        root /var/www/petmarketing-website;
+        root /opt/apps/HomePage/out;
         index index.html;
         try_files $uri $uri/ /index.html;  # SPA路由支持
         expires 1d;
@@ -158,7 +158,7 @@ sudo systemctl start nginx
 
 ```bash
 # 启用配置
-sudo ln -sf /etc/nginx/sites-available/petmarketing /etc/nginx/sites-enabled/petmarketing
+sudo ln -sf /etc/nginx/sites-available/homepage /etc/nginx/sites-enabled/homepage
 
 # 禁用默认配置
 sudo rm -f /etc/nginx/sites-enabled/default
@@ -197,7 +197,7 @@ cd /Users/yujun/workspace/HomePage/pet-marketing-website
 npm run build
 
 # 上传到服务器
-rsync -avz out/ root@你的服务器IP:/var/www/petmarketing-website/
+rsync -avz out/ root@你的服务器IP:/opt/apps/HomePage/out/
 
 # 无需重启Nginx，文件更新后立即生效
 ```

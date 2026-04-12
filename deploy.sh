@@ -7,7 +7,7 @@ set -e
 # 配置变量（修改为你的实际值）
 SERVER_IP="your_server_ip"
 SERVER_USER="root"
-DEPLOY_PATH="/var/www/petmarketing-website"
+DEPLOY_PATH="/opt/apps/HomePage"
 DOMAIN="mineclaw.top"
 
 echo "=== 宠店营销Agent 官方网页 部署开始 ==="
@@ -52,7 +52,7 @@ if [ "$configure_nginx" = "y" ] || [ "$configure_nginx" = "Y" ]; then
     echo "请在服务器上执行以下操作："
     echo ""
     echo "1. 创建或更新Nginx配置文件："
-    echo "   sudo nano /etc/nginx/sites-available/petmarketing"
+    echo "   sudo nano /etc/nginx/sites-available/homepage"
     echo ""
     echo "2. 参考项目中的 nginx.conf 文件，将域名替换为: ${DOMAIN}"
     echo ""
@@ -62,7 +62,7 @@ if [ "$configure_nginx" = "y" ] || [ "$configure_nginx" = "Y" ]; then
     echo "   sudo systemctl start nginx"
     echo ""
     echo "4. 启用配置："
-    echo "   sudo ln -sf /etc/nginx/sites-available/petmarketing /etc/nginx/sites-enabled/"
+    echo "   sudo ln -sf /etc/nginx/sites-available/homepage /etc/nginx/sites-enabled/"
     echo "   sudo rm -f /etc/nginx/sites-enabled/default"
     echo "   sudo nginx -t"
     echo "   sudo systemctl reload nginx"

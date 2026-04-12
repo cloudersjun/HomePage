@@ -35,7 +35,7 @@ npm run build
 npm run build
 
 # 2. 上传到服务器
-rsync -avz out/ root@your-server:/var/www/petmarketing-website/
+rsync -avz out/ root@your-server:/opt/apps/HomePage/out/
 
 # 3. 配置Nginx（参考nginx.conf）
 # 4. 重载Nginx

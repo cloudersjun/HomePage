@@ -120,7 +120,7 @@ export default function AboutSection() {
               微信小程序体验
             </a>
             <a
-              href="mailto:support@petmarketing.cn"
+              href="mailto:support@mineclaw.top"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white rounded-full font-semibold border-2 border-white hover:bg-white/10 transition-all"
             >
               <Mail className="w-5 h-5" />
@@ -130,11 +130,7 @@ export default function AboutSection() {
           <div className="mt-8 flex flex-col sm:flex-row gap-6 justify-center text-sm opacity-90">
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <span>support@petmarketing.cn</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4" />
-              <span>400-123-4567</span>
+              <span>support@mineclaw.top</span>
             </div>
           </div>
         </motion.div>

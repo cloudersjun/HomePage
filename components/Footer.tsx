@@ -49,11 +49,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-gray-600">
                 <Mail className="w-4 h-4" />
-                <span>support@petmarketing.cn</span>
-              </li>
-              <li className="flex items-center gap-2 text-gray-600">
-                <Phone className="w-4 h-4" />
-                <span>400-123-4567</span>
+                <span>support@mineclaw.top</span>
               </li>
               <li className="flex items-start gap-2 text-gray-600">
                 <MapPin className="w-4 h-4 mt-1" />
