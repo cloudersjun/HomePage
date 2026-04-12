@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Heart, Target, Users, Mail, Phone, MessageCircle } from 'lucide-react';
+import { Heart, Target, Users, MessageCircle, AtSign } from 'lucide-react';
 
 export default function AboutSection() {
   return (
@@ -119,18 +119,25 @@ export default function AboutSection() {
               <MessageCircle className="w-5 h-5" />
               微信小程序体验
             </a>
-            <a
-              href="mailto:support@mineclaw.top"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white rounded-full font-semibold border-2 border-white hover:bg-white/10 transition-all"
-            >
-              <Mail className="w-5 h-5" />
-              联系客服
-            </a>
+            <div className="inline-flex items-center justify-center gap-6 px-8 py-4 bg-transparent text-white rounded-full font-semibold border-2 border-white">
+              <div className="flex items-center gap-2">
+                <MessageCircle className="w-5 h-5" />
+                <span>Cloudersjun</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <AtSign className="w-5 h-5" />
+                <span>983587768</span>
+              </div>
+            </div>
           </div>
-          <div className="mt-8 flex flex-col sm:flex-row gap-6 justify-center text-sm opacity-90">
+          <div className="mt-6 flex flex-col sm:flex-row gap-6 justify-center text-sm opacity-90">
             <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4" />
-              <span>support@mineclaw.top</span>
+              <MessageCircle className="w-4 h-4" />
+              <span>微信：Cloudersjun</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <AtSign className="w-4 h-4" />
+              <span>QQ：983587768</span>
             </div>
           </div>
         </motion.div>

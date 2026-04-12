@@ -1,4 +1,4 @@
-import { PawPrint, Mail, Phone, MapPin } from 'lucide-react';
+import { PawPrint, MapPin, MessageCircle, AtSign } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -64,8 +64,12 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-800 mb-4">联系我们</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-gray-600">
-                <Mail className="w-4 h-4" />
-                <span>support@mineclaw.top</span>
+                <MessageCircle className="w-4 h-4" />
+                <span>微信：Cloudersjun</span>
+              </li>
+              <li className="flex items-center gap-2 text-gray-600">
+                <AtSign className="w-4 h-4" />
+                <span>QQ：983587768</span>
               </li>
               <li className="flex items-start gap-2 text-gray-600">
                 <MapPin className="w-4 h-4 mt-1" />
