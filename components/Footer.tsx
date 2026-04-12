@@ -53,7 +53,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2 text-gray-600">
                 <MapPin className="w-4 h-4 mt-1" />
-                <span>北京市朝阳区科技园区</span>
+                <span>高新区中和街道</span>
               </li>
             </ul>
           </div>
