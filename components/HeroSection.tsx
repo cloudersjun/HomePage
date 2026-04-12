@@ -31,10 +31,10 @@ export default function HeroSection() {
             transition={{ delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6"
           >
-            让每一只宠物都成为
+            AI赋能宠物门店
             <br />
             <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
-              营销明星
+              一站式智能营销平台
             </span>
           </motion.h1>
 
