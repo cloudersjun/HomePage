@@ -1,13 +1,39 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Heart, Target, Users, MessageCircle, AtSign } from 'lucide-react';
+import { HelpCircle, MessageCircle, AtSign, MapPin } from 'lucide-react';
+
+const faqs = [
+  {
+    q: '提词器需要下载 App 吗？',
+    a: '不需要。提词器是网页应用，在 iPhone/iPad/Mac 的浏览器里打开就能用。建议添加到主屏幕，体验接近原生 App。',
+  },
+  {
+    q: '收费吗？',
+    a: '完全免费，不登录、不注册、不加水印。如果你觉得有用，推荐给朋友就行。',
+  },
+  {
+    q: '支持镜像模式吗？',
+    a: '支持。镜像模式适配提词器硬件反射，照着镜头读文字也是正的。',
+  },
+  {
+    q: '文稿会上传到服务器吗？',
+    a: '不会。文稿只存在你浏览器的 localStorage 里，下次打开还在。换设备或清浏览器缓存会丢失。',
+  },
+  {
+    q: '手机上字体太小怎么办？',
+    a: '在设置里调字号、行距、边距。字号支持 24-120px，手机录视频建议 60-80px。',
+  },
+  {
+    q: '能调滚动速度吗？',
+    a: '可以。滚动速度 10-200 px/s 无级调节，匹配你的语速。也可以在播放时实时调速。',
+  },
+];
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="faq" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -15,8 +41,8 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-2 bg-pink-100 rounded-full mb-4"
           >
-            <Heart className="w-4 h-4 text-pink-500" />
-            <span className="text-sm font-medium text-pink-700">关于我们</span>
+            <HelpCircle className="w-4 h-4 text-pink-500" />
+            <span className="text-sm font-medium text-pink-700">常见问题</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -24,113 +50,40 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
           >
-            专注为宠物门店提供AI营销服务
+            你可能想知道的
           </motion.h2>
         </div>
 
-        {/* Story */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">我们的故事</h3>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              我们是一支热爱宠物、深耕AI技术的团队。在走访了数百家宠物门店后，我们发现：
-              门店员工花了大量时间照顾宠物和接待客户，却很难抽出精力做专业的营销推广。
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              于是我们创造了「宠店营销Agent」——让AI成为每家门店的营销助手。
-              门店只需上传照片，剩下的交给AI。
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              现在，已有超过1000+宠物门店在使用我们的产品，每月生成超过10000+营销素材。
-              我们希望帮助更多宠物门店，让营销不再是门店经营的负担。
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-orange-100 to-pink-100 rounded-3xl p-8 min-h-[300px] flex items-center justify-center"
-          >
-            <div className="text-center">
-              <div className="text-6xl mb-4">🐾</div>
-              <p className="text-2xl font-bold text-gray-800 mb-2">让门店营销变得如此简单</p>
-              <p className="text-gray-600">门店员工专注服务客户，营销交给我们</p>
-            </div>
-          </motion.div>
+        <div className="max-w-3xl mx-auto mb-20">
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={faq.q}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="bg-gradient-to-br from-orange-50 to-pink-50 rounded-2xl p-6"
+              >
+                <h4 className="text-lg font-bold text-gray-900 mb-2">{faq.q}</h4>
+                <p className="text-gray-700 leading-relaxed">{faq.a}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
-        {/* Values */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {[
-            {
-              icon: Target,
-              title: '专注门店价值',
-              description: '我们专注于为宠物门店创造真实的营销价值，每一分投入都要有回报',
-            },
-            {
-              icon: Users,
-              title: '门店用户至上',
-              description: '倾听门店用户声音，持续迭代优化，让产品真正解决门店经营痛点',
-            },
-            {
-              icon: Heart,
-              title: '热爱宠物',
-              description: '团队每个成员都是宠物爱好者，我们用爱心做产品',
-            },
-          ].map((value, index) => (
-            <motion.div
-              key={value.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="text-center p-6 bg-gradient-to-br from-orange-50 to-pink-50 rounded-2xl"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <value.icon className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">{value.title}</h4>
-              <p className="text-gray-600">{value.description}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Contact */}
         <motion.div
+          id="contact"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="bg-gradient-to-br from-orange-400 to-pink-400 rounded-3xl p-12 text-center text-white"
         >
-          <h3 className="text-3xl font-bold mb-4">准备好开始了吗？</h3>
+          <h3 className="text-3xl font-bold mb-4">有其他问题？</h3>
           <p className="text-lg mb-8 opacity-90">
-            立即为门店体验AI智能营销，或联系我们获取专属方案
+            加微信，拉你进创作者交流群
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://mp.weixin.qq.com"
-              target="_blank"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-orange-500 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all"
-            >
-              <MessageCircle className="w-5 h-5" />
-              微信小程序体验
-            </a>
-            <div className="inline-flex items-center justify-center gap-6 px-8 py-4 bg-transparent text-white rounded-full font-semibold border-2 border-white">
-              <div className="flex items-center gap-2">
-                <MessageCircle className="w-5 h-5" />
-                <span>Cloudersjun</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <AtSign className="w-5 h-5" />
-                <span>983587768</span>
-              </div>
-            </div>
-          </div>
-          <div className="mt-6 flex flex-col sm:flex-row gap-6 justify-center text-sm opacity-90">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center text-sm opacity-90">
             <div className="flex items-center gap-2">
               <MessageCircle className="w-4 h-4" />
               <span>微信：Cloudersjun</span>
@@ -138,6 +91,10 @@ export default function AboutSection() {
             <div className="flex items-center gap-2">
               <AtSign className="w-4 h-4" />
               <span>QQ：983587768</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4" />
+              <span>成都</span>
             </div>
           </div>
         </motion.div>
