@@ -19,8 +19,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "宠店营销Agent - AI驱动的宠物门店营销内容生成平台",
-  description: "上传宠物照片，AI一键生成专业营销素材。海报、文案、社交媒体内容，统统搞定。让每一只宠物都成为营销明星！",
+  title: "创作者工具箱 — 免费网页提词器",
+  description: "适合 iPhone / iPad 录视频使用的简洁网页提词器，支持镜像模式、滚动调速、字号行距自定义，草稿自动保存，免费无需登录。",
+  keywords: "提词器,网页提词器,免费提词器,口播工具,录视频工具,iPhone提词器",
   icons: {
     icon: "/mineclaw.png",
     apple: "/mineclaw.png",

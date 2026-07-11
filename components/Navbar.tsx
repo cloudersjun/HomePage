@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, PawPrint } from 'lucide-react';
+import { Menu, X, Mic } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
@@ -19,9 +19,8 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: '首页' },
-    { href: '/#features', label: '功能' },
-    { href: '/#pricing', label: '定价' },
-    { href: '/#about', label: '关于' },
+    { href: '/teleprompter', label: '提词器' },
+    { href: '/#faq', label: '常见问题' },
   ];
 
   return (
@@ -32,33 +31,18 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <motion.div
               whileHover={{ rotate: 15 }}
               className="w-10 h-10 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full flex items-center justify-center overflow-hidden shadow-inner"
             >
-              {/* 这里预留头像图片路径，如果没有图片则显示图标 */}
-              <img 
-                src="/mineclaw.png" 
-                alt="Logo" 
-                className="w-full h-full object-cover hidden group-hover:block" 
-                style={{ 
-                  filter: 'sepia(1) hue-rotate(320deg) saturate(2) brightness(1.1)'
-                }}
-                onError={(e) => (e.currentTarget.style.display = 'none')}
-              />
-              <PawPrint className="w-6 h-6 text-white group-hover:hidden" />
-              <div className="w-full h-full flex items-center justify-center group-hover:hidden">
-                <PawPrint className="w-6 h-6 text-white" />
-              </div>
+              <Mic className="w-6 h-6 text-white" />
             </motion.div>
             <span className="text-xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
-              宠店营销Agent
+              创作者工具箱
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
@@ -70,17 +54,15 @@ export default function Navbar() {
               </Link>
             ))}
             <motion.a
-              href="https://mp.weixin.qq.com"
-              target="_blank"
+              href="/teleprompter"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-6 py-2 bg-gradient-to-r from-orange-400 to-pink-400 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow"
             >
-              立即体验
+              立即使用
             </motion.a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2"
             onClick={() => setIsOpen(!isOpen)}
@@ -90,7 +72,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -111,12 +92,11 @@ export default function Navbar() {
                 </Link>
               ))}
               <a
-                href="https://mp.weixin.qq.com"
-                target="_blank"
+                href="/teleprompter"
                 className="block w-full text-center px-6 py-3 bg-gradient-to-r from-orange-400 to-pink-400 text-white rounded-full font-medium"
                 onClick={() => setIsOpen(false)}
               >
-                立即体验
+                立即使用
               </a>
             </div>
           </motion.div>
